@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Principal
+{
+    public void main(String args[])
+    {
+        Scanner scan= new Scanner(System.in);
+        TxtEnJava txt= new TxtEnJava();
+        Administrador administrar= new Administrador();
+        Cliente usuario= new Cliente();
+        System.out.println("Ingrese 1 en el caso de ser cliente, 2 si es administrador");
+        int numero= scan.nextInt();
+        
+        if(numero==1)
+        {
+            System.out.println("Ingresa el nombre del producto, nosotros lo buscaremos por ti");
+            String nombreProducto= scan.next();
+          usuario.buscarProducto(nombreProducto);  
+        }
+        else if(numero==2)
+        {
+          administrar.registroAdministrador();  
+        }
+        else
+        {
+            System.out.println("El numero ingresado no es una opción");
+        }
+        
+        
+    }
+}
